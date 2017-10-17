@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>JinPartners</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body class="">
+	<div class="container">
+        <div class="logo half">
+            <img id="logo" src="logo.jpeg" />
+        </div>
+        <div class="email">
+            <a class="button">contact@jinpartners.com</a>
+        </div>
+        <div class="slogan half">
+            <p>A Rising Investor in Asian Financial Markets</p>
+        </div>
+        <footer class="wrapper style1 align-center is-inactive">
+            <div class="inner">
+                <p><br>Greater China</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        var half_window = window.innerHeight/2;
+
+        var half = document.getElementsByClassName("half");
+        for (var i = 0; i <= half.length; i++) {
+            half[i].style.height = half_window + "px";
+        } 
+
+        var logo = document.getElementById("logo");
+        logo.style.top = half_window + "px";
+    </script>
+</body>
+
+</html>
