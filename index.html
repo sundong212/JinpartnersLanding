@@ -6,10 +6,14 @@
 	<title>JinPartners</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="dubai-font.css" rel="stylesheet">
 </head>
 
 <body class="">
+    <div class="header">
+        <h3>JIN Partners, LP</h3>
+    </div>
 	<div class="container">
         <div class="logo half">
             <img id="logo" src="logo.jpeg" />
@@ -22,19 +26,18 @@
         </div>
         <footer class="wrapper style1 align-center is-inactive">
             <div class="inner">
-                <p><br>Greater China</p>
+                <p><br>Greater China, Asia</p>
+                <p>@2017 JIN Partners, LP. All Riights Reserved</p>
             </div>
         </footer>
     </div>
 
     <script>
         var half_window = window.innerHeight/2;
-
         var half = document.getElementsByClassName("half");
         for (var i = 0; i <= half.length; i++) {
             half[i].style.height = half_window + "px";
-        } 
-
+        }
         var logo = document.getElementById("logo");
         logo.style.top = half_window + "px";
     </script>
