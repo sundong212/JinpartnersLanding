@@ -50,24 +50,17 @@ html, body {
     text-align: center;
 }
 .logo-slogan{
-    display: block;
+    display: none;
     position: relative;
-    width: 100%;
+    width: 50%;
+    left: -170px;
+    margin: 0 auto;
 }
 .logo-slogan img{
-    width: 28%;
+    width: 50%;
 }
 
-.horizontals{
-    display: hidden;
-    position: relative;
-    width: 400px;
-    height: 2px;
-    background: white;
-    margin: 0 auto;
-    box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6);
-    margin-bottom: 2%;
-}
+
 .vertical-red{
     display: block;
     position: relative;
@@ -77,13 +70,94 @@ html, body {
 }
 
 .sentence1{
+    position: relative;
+    width: 100%;
+    display: none;
     font-size: 34px;
     color: whitesmoke;
     font-family: "Times New Roman";
     font-style: italic;
     font-weight: 100;
     line-height: 40px;
-    margin: 0;
+    margin: 10px 0 0 0;
+    right: -180px;
+}
+.sentence2{
+    position: relative;
+    width: 100%;
+    display: none;
+    font-size: 40px;
+    color: whitesmoke;
+    font-family: "Times New Roman";
+    font-weight: 100;
+    line-height: 40px;
+    right: -150px;
+    text-align: center;
+    margin: 0 0 0 0;
+    top: 40px;
+}
+.sentence3{
+    position: relative;
+    width:100%;
+    display: none;
+    font-size: 40px;
+    color: whitesmoke;
+    font-family: "Times New Roman";
+    font-weight: 100;
+    line-height: 40px;
+    right: -150px;
+    text-align: center;
+    margin: 0 0 0 0;
+    top: 40px;
+}
+.title2{
+    position: relative;
+    width: 100%;
+    display: none;
+    font-size: 16px;
+    color: whitesmoke;
+    font-family: "Garamond";
+    text-align: center;
+    font-weight: 100;
+    line-height: 40px;
+    left: -180px;
+    top: 35px;
+}
+.title3{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: none;
+    font-size: 16px;
+    color: whitesmoke;
+    font-family: "Garamond";
+    font-weight: 100;
+    line-height: 40px;
+    left: -180px;
+    top: 35px;
+}
+.mobile-sentence1{
+    display: none;
+}
+.horizontals{
+    position: absolute;
+    width: 130px;
+    height: 2px;
+    background: white;
+    margin: 0 auto;
+    box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6);
+    margin-bottom: 2%;
+    z-index: 100000;
+}
+.top{  
+    display: none;
+    top: 73%;
+    left: -150px;
+}
+.down{
+    display: none;
+    top: 117%;
+    right: -150px;
 }
 .footer{
     height: 120px;
@@ -113,4 +187,147 @@ html, body {
 #email{
     font-size: 12px;
     margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .logo-slogan {
+        display: block;
+        left: -50px;
+        top: 105px;
+    }
+    .header {
+        height: 40px;
+    }
+    .logo-slogan img{
+        width: 160%;
+    }
+    .sentence1 {
+        display: none;
+    }
+    #jumbotron{
+        background-size: none;
+    }
+    .mobile-sentence1{
+        display: block;
+        position: relative;
+        width: 100%;
+        font-size: 22px;
+        color: whitesmoke;
+        font-family: "Times New Roman";
+        font-style: italic;
+        font-weight: 100;
+        line-height: 25px;
+        top: 80px;
+    }
+    .horizontal{
+        display: block;
+    }
+    #copyright{
+        font-size: 8px;
+    }
+    #region{
+        padding-top: 5px;
+        font-size: 8px;
+    }
+    #email{
+        font-size: 10px;
+    }
+    .footer{
+        height: 60px;
+    }
+    .horizontal{
+        display: block;
+        position: relative;
+        width: 280px;
+        height: 1px;
+        background: black;
+        margin: auto;
+    }
+
+
+}
+@media screen and (max-width: 380px) {
+    .logo-slogan {
+        display: block;
+        left: -45px;
+        top: 85px;
+    }
+    .logo-slogan img{
+        width: 160%;
+    }
+
+    .sentence1 {
+        display: none;
+    }
+    .mobile-sentence1{
+        display: block;
+        position: relative;
+        width: 100%;
+        font-size: 18px;
+        color: whitesmoke;
+        font-family: "Times New Roman";
+        font-style: italic;
+        font-weight: 100;
+        line-height: 22px;
+        top: 60px;
+    }
+    .horizontal{
+        display: block;
+        position: relative;
+        width: 280px;
+        height: 1px;
+        background: black;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 320px) {
+    .logo-slogan {
+        display: block;
+        left: -44px;
+        top: 80px;
+    }
+    .sentence1 {
+        display: none;
+    }
+    .mobile-sentence1{
+        display: block;
+        position: relative;
+        width: 100%;
+        font-size: 16px;
+        color: whitesmoke;
+        font-family: "Times New Roman";
+        font-style: italic;
+        font-weight: 100;
+        line-height: 22px;
+        top: 50px;
+    }
+    .horizontal{
+        display: block;
+        position: relative;
+        width: 260px;
+        height: 1px;
+        background: black;
+        margin: auto;
+    }
+}
+@media screen and (min-height: 800px) {
+    .down{
+        display: none;
+        top: 115%;
+        right: -150px;
+    }
+    .top{
+        top: 72%
+    }
+}
+
+@media screen and (min-height: 850px) {
+    .down{
+        display: none;
+        top: 105%;
+        right: -150px;
+    }
+    .top{
+        top: 72%
+    }
 }

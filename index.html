@@ -7,33 +7,159 @@
     <title>New Asia, LLC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style/style.css" rel="stylesheet">
-    <link href="dubai-font.css" rel="stylesheet">
+    <script src="style/jquery.min.js"></script>
+    <link href="style/dubai-font.css" rel="stylesheet">
+
 </head>
+<script>
+    
+
+var currWidth = $(window).width();
+console.log(currWidth);
+var topstartPos = -130;
+var downstartPos = -130;
+var topEndPos = (currWidth / 2) + (topstartPos / 2);
+console.log(topEndPos);
+var downEndPos = (currWidth / 2) + (downstartPos / 2) - 5;
+if (navigator.appVersion.indexOf("Win")!=-1) {
+        topEndPos = topEndPos - 5;
+        downEndPos = downEndPos - 9;
+}
+
+    if($(window).width() > 768) {
+        setTimeout(function () {
+        $(".logo-slogan").fadeIn(500).animate({ left: '10px' }).dequeue();
+            $(".sentence1").fadeIn(500).animate({ right: '5px' }).dequeue();
+        setInterval(function () {
+            $(".logo-slogan").fadeIn(500).animate({ left: '5px' }).dequeue();
+            $(".sentence1").fadeIn(500).animate({ right: '5px' }).dequeue();
+        }, 15000)
+    }, 1000);
+
+    setTimeout(function () {
+        $(".logo-slogan").fadeOut(500).animate({ left: '300px' }).dequeue();
+        $(".sentence1").fadeOut(500).animate({ right: '300px' }).dequeue();
+        setInterval(function () {
+            $(".logo-slogan").fadeOut(500).animate({ left: '300px' }).dequeue();
+            $(".sentence1").fadeOut(500).animate({ right: '300px' }).dequeue();
+        }, 15000)
+    }, 6000)
+    }
+    
+
+    if($(window).width() > 768) {
+        setTimeout(function () {
+        $(".top").fadeIn(500).animate({ left: topEndPos + "px" }).dequeue();
+        $(".down").fadeIn(500).animate({ right: downEndPos+ "px" }).dequeue();
+        setInterval(function(){
+            $(".top").fadeIn(500).animate({ left: topEndPos + "px" }).dequeue();
+            $(".down").fadeIn(500).animate({ right: downEndPos + "px" }).dequeue();
+        }, 15000)
+    }, 6500)
+
+
+    setTimeout(function () {
+        $(".title2").fadeIn(500).animate({ left: '5px' }).dequeue();
+        $(".sentence2").fadeIn(500).animate({ right: '-5px' }).dequeue();
+        setInterval(function(){
+            $(".title2").fadeIn(500).animate({ left: '5px' }).dequeue();
+            $(".sentence2").fadeIn(500).animate({ right: '-5px' }).dequeue();
+        }, 15000)
+    }, 7000)
+
+    setTimeout(function () {
+        $(".top").fadeOut(500).animate({ left: '300px' }).dequeue();
+        $(".down").fadeOut(500).animate({ right: '300px' }).dequeue();
+        setInterval(function(){
+            $(".top").fadeOut(500).animate({ left: '300px' }).dequeue();
+        $(".down").fadeOut(500).animate({ right: '300px' }).dequeue();
+        }, 15000)
+    }, 10000)
+
+    setTimeout(function () {
+        $(".title2").fadeOut(500).animate({ left: '300px' }).dequeue();
+        $(".sentence2").fadeOut(500).animate({ right: '300px' }).dequeue();
+        setInterval(function(){
+            $(".title2").fadeOut(500).animate({ left: '300px' }).dequeue();
+        $(".sentence2").fadeOut(500).animate({ right: '300px' }).dequeue();
+        }, 15000)
+    }, 10500)
+
+    setTimeout(function () {
+        $(".top").fadeIn(500).animate({ left: topEndPos + "px" }).dequeue();
+        $(".down").fadeIn(500).animate({ right: downEndPos + "px" }).dequeue();
+        setInterval(function(){
+            $(".top").fadeIn(500).animate({ left: topEndPos + "px" }).dequeue();
+            $(".down").fadeIn(500).animate({ right: downEndPos + "px" }).dequeue();
+        }, 15000)
+    }, 11000)
+
+    setTimeout(function () {
+        $(".title3").fadeIn(500).animate({ left: '5px' }).dequeue();
+        $(".sentence3").fadeIn(500).animate({ right: '-5px' }).dequeue();
+        setInterval(function(){
+            $(".title3").fadeIn(500).animate({ left: '5px' }).dequeue();
+            $(".sentence3").fadeIn(500).animate({ right: '-5px' }).dequeue();
+        }, 15000);
+    }, 11500)
+
+    setTimeout(function () {
+        $(".top").fadeOut(500).animate({ left: '300px' }).dequeue();
+        $(".down").fadeOut(500).animate({ right: '300px' }).dequeue();
+        setInterval(function(){
+            $(".top").fadeOut(500).animate({ left: '300px' }).dequeue();
+            $(".down").fadeOut(500).animate({ right: '300px' }).dequeue();
+        }, 15000)
+    }, 14500)
+
+    setTimeout(function () {
+        $(".title3").fadeOut(500).animate({ left: '300px' }).dequeue();
+        $(".sentence3").fadeOut(500).animate({ right: '300px' }).dequeue();
+        setInterval(function() {
+            $(".title3").fadeOut(500).animate({ left: '300px' }).dequeue();
+            $(".sentence3").fadeOut(500).animate({ right: '300px' }).dequeue();
+        }, 15000)
+    }, 15000)
+    }
+    
+</script>
+
 
 <body>
     <div id="container">
         <div class="header">
             <!-- <img src="assets/logo.png"> -->
         </div>
-        <div class="content">
-            <div id="jumbotron">
-                <span class="horizontals"></span>
-                <div class="slogans">
-                    <div class="logo-slogan">
-                        <img src="assets/transparentlogo.png">
-                    </div>
-                    <p class="sentence1">New Asia LLC is a rising hedge fund in Asia
-                        <br/> dedicated to producing exceptional returns for its investors</p>
+
+        <div id="jumbotron">
+            
+            <div class="slogans">
+                <span class="horizontals top"></span>
+                <div class="logo-slogan">
+                    <img src="assets/transparentlogo.png">
                 </div>
-                <span class="horizontals"></span>
+                <p class="sentence1">New Asia LLC is a rising hedge fund in Asia
+                    <br/> dedicated to producing exceptional returns for its investors</p>
+                <p class="mobile-sentence1">
+                    New Asia LLC is a<br />
+                    rising hedge fund in Asia dedicated to<br />
+                    producing exceptional returns for its investors
+                </p>
+                <p class="title2">CAPITALIZING ON</p>
+                <p class="sentence2">EXCELLENCE</p>
+                <p class="title3">PARTNERING WITH</p>
+                <p class="sentence3">NEXT GENERATIONS</p>
+                <span class="horizontals down"></span>
             </div>
-            <div class="footer">
-                <p id="region">BEIJING &nbsp|&nbsp HONG KONG &nbsp|&nbsp SEOUL</p>
-                <p id="email">media@newasiallc.com</p>
-                <span class="horizontal"></span>
-                <p id="copyright">©2017 New Asia, LLC. All Rights Reserved</p>
-            </div>
+            
         </div>
+        <div class="footer">
+            <p id="region">BEIJING &nbsp|&nbsp HONG KONG &nbsp|&nbsp SEOUL</p>
+            <p id="email">media@newasiallc.com</p>
+            <span class="horizontal"></span>
+            <p id="copyright">©2017 New Asia, LLC. All Rights Reserved</p>
+        </div>
+    </div>
     </div>
 
 
@@ -41,9 +167,13 @@
 </body>
 <script>
     var whole = document.getElementById("jumbotron");
-    whole.style.height = window.innerHeight - 120 - 50 + "px";
+   
+    if ($(window).width() > 768) {
+        whole.style.height = window.innerHeight - 120 - 50 + "px";
+    } else {
+        whole.style.height = window.innerHeight - 60 - 40 + "px";
+    }
     var containerelement = document.getElementById("container");
     containerelement.style.height = window.innerHeight;
 </script>
-
 </html>
